@@ -1,0 +1,18 @@
+<h1 class="text-center">Users</h1>
+
+<div *ngIf="user.length>0;else nouser">
+    <table class="table table-bordered">
+        <tr class="bg-light">
+            <th>Id</th>
+            <th>Name</th>
+            <th>UserName</th>
+            <th>email</th>
+        </tr>
+        <tr *ngFor="let users of user">
+            <td>{{ users.id }}</td>
+            <td>{{ users.name }}</td>
+            <td>{{ users.username }}</td>
+            <td>{{ users.email }}</td>
+        </tr>
+    </table>
+</div>
